@@ -1,0 +1,58 @@
+To understand what you need to do for the project, we will create a diagram
+of two rows (e.g, first row is all green and second all red) and then animate
+it by swapping those two rows.  This will help you understand what you need
+to do for the project. Notice you don't need to submit the class SwapRows;
+it is just an example.
+
+1. The app package has methods that return a string representing a diagram.
+   For example, the getTwoRowsDiagram returns a string with two rows
+   of characters, based on the parameters provided.  At this point take a look
+   at the first student test to see what this method does. For the project 
+   you should not need to modify anything in the app package as you will 
+   just copy the class you implemented earlier in the semester.
+   
+2. You don't have to look/do anything with the gui package.
+
+3. A lot of your work will be in the TwoDimArrayUtil.java class.  This class 
+   provides methods to manipulate two-dimensional arrays.  Start with this 
+   class.  For example, we provided a method called swapFirstAndSecondRow 
+   that returns an array where rows have been swapped.  At this point 
+   take a look at the second student test.
+   
+4. Once you have implemented the TwoDimArrayUtil.java methods, you can
+   create diagrams that rely on those methods.  A diagram is a 
+   two-dimensional array of characters. These arrays can be modified by 
+   using the nextAnimationStep method. The class SwapRows implements a 
+   diagram based on the getTwoRowsDiagram method.  It calls the 
+   getTwoDiagram method to get a String with a diagram of two rows 
+   (e.g., "RR\nGG").  Now, we need to create a two-dim array of characters 
+   using this string.  We have provided that method for you :)  The method 
+   is BoardCell.getCharArray.  Just provide the string and it will return 
+   a two-dim array of characters.  This array will be an instance 
+   variable in the SwapRows class. 
+   
+5. The SwapRows class needs to implement the Diagram interface.  The methods 
+   for the SwapRows (seeSwapRows class) will be:
+   
+   a. Constructor - Initializes the board array
+   b. getBoard - Returns the board
+   c. nextAnimationStep - returns the next animation.  An animation is a
+      modification of the board.  For this class, the animation is to
+      swap the first and second rows. For this task you can use the method
+      swapFirstAndSecondRow that is part of the TwoDimArrayUtil.java class.
+   d. getNumberRows - returns the number of rows of the board array
+   e. getNumberCols - returns the number of columns of the board array
+   
+   At this point, take a look at the third student test. You will see how
+   it creates a SwapRows diagram and each time you call nextAnimationStep
+   the rows are swapped.
+   
+   You see, you can finish the project without using the graphical interface.
+   If you would like to see how animating your diagram looks like, execute
+   the main method of the GraphicalDriverLabExample.java class.
+   
+   The summary is that you can take any string diagram, convert it into
+   a two-dimensional array of characters and then define methods that
+   modify the array to create any animation you would like to have.
+   
+   This project has been brought to you by a lot of coffee!

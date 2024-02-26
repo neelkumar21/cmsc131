@@ -1,0 +1,12 @@
+
+Board1:
+[R, R]
+[G, G]
+
+Board2:
+[G, G]
+[R, R]
+
+Board3:
+[R, R]
+[G, G]
